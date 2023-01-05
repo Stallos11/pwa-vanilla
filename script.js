@@ -21,7 +21,8 @@ const registerServiceWorker = async () => {
   }
 
   const handleNetworkChange = (e) => {
-    document.querySelector('#status').innerHTML = e && e.type ? e.type : navigator.onLine;
+    const status = e && e.type ? e.type : navigator.onLine ? 'online' : 'offline';
+    document.querySelector('#status').innerHTML = status;
   };
 
   handleNetworkChange();
