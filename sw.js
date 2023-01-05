@@ -15,11 +15,4 @@ self.addEventListener('install', (event) => {
   );
 });
 
-const handleNetworkChange = (e) => {
-  document.querySelector('#status').innerHTML = e.type;
-};
-
-window.addEventListener('online', handleNetworkChange);
-window.addEventListener('offline', handleNetworkChange);
-
 self.addEventListener('fetch', () => console.log('fetch'));

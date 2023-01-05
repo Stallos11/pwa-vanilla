@@ -19,4 +19,11 @@ const registerServiceWorker = async () => {
       console.error(`L'enregistrement a échoué : ${error}`);
     }
   }
+
+  const handleNetworkChange = (e) => {
+    document.querySelector('#status').innerHTML = e.type;
+  };
+
+  window.addEventListener('online', handleNetworkChange);
+  window.addEventListener('offline', handleNetworkChange);
 };
