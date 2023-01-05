@@ -1,9 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   registerServiceWorker();
-
-  self.addEventListener('install', (event) => {
-    event.waitUntil(addResourcesToCache(['/', '/index.html', '/style.css', '/script.js', '/icone.png']));
-  });
 });
 
 const registerServiceWorker = async () => {
@@ -23,9 +19,4 @@ const registerServiceWorker = async () => {
       console.error(`L'enregistrement a échoué : ${error}`);
     }
   }
-};
-
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open('v1');
-  await cache.addAll(resources);
 };
