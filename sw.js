@@ -4,5 +4,13 @@ const addResourcesToCache = async (resources) => {
 };
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(addResourcesToCache(['/', '/index.html', '/style.css', '/script.js', '/icone.png']));
+  event.waitUntil(
+    addResourcesToCache([
+      '/pwa-vanilla/',
+      '/pwa-vanilla/index.html',
+      '/pwa-vanilla/style.css',
+      '/pwa-vanilla/script.js',
+      '/pwa-vanilla/icone.png',
+    ])
+  );
 });
