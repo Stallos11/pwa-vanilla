@@ -21,7 +21,6 @@ const registerServiceWorker = async () => {
   }
 
   const handleNetworkChange = (e) => {
-    console.log(e);
     document.querySelector('#status').innerHTML = e.type;
   };
 
